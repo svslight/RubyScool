@@ -3,7 +3,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 
 get '/' do
-  erb 'Can you handle a <a href="/secure/place">secret</a>?'
+  erb 'Hello all Ruby-programmers!'
 end
 
 get '/about' do
@@ -12,6 +12,16 @@ end
 
 get '/visit' do
    erb :visit
+end
+
+post '/visit' do
+	@username = params[:username]
+	@phone = params[:phone]
+	@datetime = params[:datetime]
+	@barber = params[:barber]
+
+	erb "Ok! username is #{@username} #{@phone} #{@datetime} #{@barber}"
+
 end
 
 get '/contacts' do
