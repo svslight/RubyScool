@@ -14,7 +14,7 @@
   </div>
 
   <div class="form-group">
-    <label>Когда вас ждать</label>
+    <label>Когда вас ждать?</label>
     <input name ="datetime" type="text" class="form-control" placeholder="Введите дату и время">
   </div>
 
@@ -24,14 +24,43 @@
       <option>Jessie</option>
       <option>Gus</option>
       <option>Walter</option>
-      <!-- <option>4</option> -->
-      <!-- <option>5</option> -->
     </select>
   </div>
 
+  <div class="form-group">
+    <label>В какие цвета хотите себя окрасить:</label>    
+    <select id="color" name="color">     <!-- name="colorpicker" -->
+      <option value="#7bd148">Green</option>
+      <option value="#5484ed">Bold blue</option>
+      <option value="#a4bdfc">Blue</option>
+      <option value="#46d6db">Turquoise</option>
+      <option value="#7ae7bf">Light green</option>
+      <option value="#51b749">Bold green</option>
+      <option value="#fbd75b">Yellow</option>
+      <option value="#ffb878">Orange</option>
+      <option value="#ff887c">Red</option>
+      <option value="#dc2127">Bold red</option>
+      <option value="#dbadff">Purple</option>
+      <option value="#e1e1e1">Gray</option>
+    </select>
+  </div>
 
 
 
   <button type="submit" class="btn btn-primary">Записаться</button>
 
 </form>
+
+<script type="text/javascript">
+  // alert('Hello from visit page!');
+  // $('#aaa').css('background-color', 'yellow');
+  // $('#bbb').css('background-color', 'blue');
+  // $('.ccc').css('background-color', 'green');
+
+// $('select[name="colorpicker"]').simplecolorpicker();
+$('#color').simplecolorpicker();
+
+// $('select[name="colorpicker"]').simplecolorpicker('selectColor', '#7bd148');
+// $('select[name="colorpicker"]').simplecolorpicker('destroy');
+
+</script> 
