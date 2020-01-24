@@ -22,9 +22,22 @@ post '/visit' do
 	@barber = params[:barber]
 	@color = params[:color]
 
-	if @username == ''
-		@error = 'Ведите имя'
-		return erb :visit
+	# validation - Проверка параметров на null
+	hh = {
+		:username => 'Введите имя', 
+		:phone => 'Введите телефон', 
+		:datetime => 'Введите дату и время'
+	}
+
+	hh.each do |key, value|
+		if params[key] == ''
+			# переменной error присвоить value из hh - это сообщение об ошибке
+			@error = hh[key]
+
+			# вернуть представление visit
+			return erb :visit
+		end
+
 	end
 
 	erb "Ok! username is #{@username}, #{@phone}, #{@datetime}, #{@barber}, #{@color}"
